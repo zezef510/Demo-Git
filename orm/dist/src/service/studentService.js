@@ -54,6 +54,17 @@ class StudentService {
             });
             return list;
         };
+        this.findOld = async (old) => {
+            let list = await this.studentRepository.find({
+                relations: {
+                    Class: true
+                },
+                where: {
+                    old: old
+                }
+            });
+            return list;
+        };
         this.studentRepository = data_source_1.AppDataSource.getRepository(student_1.Studen);
     }
 }

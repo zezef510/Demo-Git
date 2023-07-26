@@ -62,6 +62,17 @@ class StudentService {
         })
         return list
     }
+    findOld = async (old) => {
+        let list = await this.studentRepository.find({
+            relations: {
+                Class: true
+            },
+            where: {
+                old: old
+            }
+        })
+        return list
+    }
 
 
 }

@@ -8,6 +8,7 @@ declare class StudentController {
     editStudent: (req: Request, res: Response) => Promise<void>;
     deleteStudent: (req: Request, res: Response) => Promise<void>;
     sortStudentsByScore: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+    findOld: (req: Request, res: Response) => Promise<void>;
 }
 declare const _default: StudentController;
 export default _default;

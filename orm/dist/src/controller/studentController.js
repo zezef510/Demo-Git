@@ -54,6 +54,10 @@ class StudentController {
             }
             res.json(students);
         };
+        this.findOld = async (req, res) => {
+            let find = await this.StudentService.findOld(req.query.old);
+            res.json(find);
+        };
         this.StudentService = studentService_1.default;
     }
 }

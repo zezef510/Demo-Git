@@ -8,6 +8,7 @@ declare class StudentService {
     findByName: (name: any) => Promise<any>;
     sortStudentsByScore: () => Promise<any>;
     sortStudentsByScore1: () => Promise<any>;
+    findOld: (old: any) => Promise<any>;
 }
 declare const _default: StudentService;
 export default _default;
